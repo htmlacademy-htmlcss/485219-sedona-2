@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Илья Харламов](https://up.htmlacademy.ru/htmlcss-individual/2/user/485219).
-* Наставник: `Неизвестно`.
+* Наставник: [Дарья Шестерина](https://htmlacademy.ru/profile/id221124).
 
 ---
 
