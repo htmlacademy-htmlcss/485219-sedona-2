@@ -2,6 +2,7 @@
 
 * Студент: [Илья Харламов](https://up.htmlacademy.ru/htmlcss-individual/2/user/485219).
 * Наставник: [Дарья Шестерина](https://htmlacademy.ru/profile/id221124).
+* Сайт: [Учебный проект Седона](https://harl-i.github.io/485219-sedona-2/).
 
 ---
 
