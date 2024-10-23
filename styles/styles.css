@@ -26,7 +26,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #F2F2F2;
   margin: 0;
 }
 
@@ -34,6 +34,7 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 /* ---ТИПОГРАФИКА--- */
@@ -160,15 +161,18 @@ body {
 .page-header {
   color: inherit;
   background-color: inherit;
-  width: 1200px;
-  height: 64px;
+  /* width: 1200px; */
+  min-height: 64px;
   display: flex;
   justify-content: space-between;
 }
 
-.page-header-logo {
+.page-header-logo img {
   margin-left: 70px;
   margin-right: 30px;
+  margin-bottom: -15px;
+  padding: 0;
+  border: none;
 }
 
 .main-menu {
@@ -179,9 +183,9 @@ body {
 
 .navigation-list {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
-  width: 400px;
+  width: 500px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -194,11 +198,17 @@ body {
   line-height: 24px;
   color: inherit;
   text-align: center;
-  text-decoration: none;
+  /* text-decoration: none; */
+  padding: 20px 16px;
 }
 
-.actions-link {
+/* .actions-link {
   text-decoration: none;
+} */
+
+.main-menu ul li > a {
+  text-decoration: none;
+  display: block;
 }
 
 .actions-item .btn {
@@ -208,6 +218,7 @@ body {
 
 .actions-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center ;
   width: 300px;
@@ -222,11 +233,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  min-height: 120px;
 }
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   list-style: none;
@@ -257,18 +269,23 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   height: 485px;
+  padding-top: 51px;
 }
 
 .page-banner img {
   box-sizing: content-box;
   display: block;
   margin: 0 auto;
-  padding: 51px 0 82px 0;
+  /* padding: 51px 0 82px 0; */
   width: 458px;
   height: 352px;
 }
 
 /* Преимущества */
+.advantages {
+  padding-top: 69px;
+}
+
 .advantages-slogan-wrap{
   display: flex;
   flex-direction: column;
@@ -283,11 +300,8 @@ body {
 
 .advantages-slogan {
   width: 620px;
-  margin: 69px 0 25px 0;
-}
-
-.advantages-slogan-subtitle {
-  width: 651px;
+  /* margin: 69px 0 25px 0; */
+  margin-bottom: 25px;
 }
 
 .advantages-slogan-subtitle {
@@ -334,12 +348,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 64px;
 }
 
 .features-title {
   width: 505px;
   text-align: center;
-  margin: 64px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .features-description {
@@ -392,14 +407,15 @@ body {
 }
 
 /* Заинтересовались? */
-.hotel-search-offer {
+.interested-offer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 96px 0;
 }
 
 .interested-title {
-  margin: 96px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .interested-description {
@@ -422,6 +438,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 96px 0 104px 0;
 }
 
 .subscribe-title,
@@ -430,7 +447,7 @@ body {
 }
 
 .subscribe-title {
-  margin: 96px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .subscribe-description {
@@ -469,14 +486,16 @@ body {
 /* Заголовок */
 .filter {
   background-image: url(../images/catalog-background.jpeg);
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
+  padding: 35px 0 70px 0;
 }
 
 .filter-title {
   margin: 0;
-  padding: 35px 0 8px 70px;
+  padding: 0 0 8px 70px;
 }
 
 /* Хлебные крошки */
@@ -501,8 +520,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 49px;
-  margin: 50px 70px 40px 70px;
+  /* height: 149px; */
+  padding: 50px 70px 40px 70px;
+}
+
+.catalog-result-title {
+  margin: 0;
 }
 
 .catalog-sort-buttons {
@@ -593,5 +616,12 @@ body {
 
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
