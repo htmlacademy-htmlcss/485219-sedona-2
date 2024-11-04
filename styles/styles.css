@@ -20,6 +20,17 @@
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -155,16 +166,12 @@ body {
 
 /* Шапка */
 .page-header {
-  color: inherit;
-  background-color: inherit;
-  min-height: 64px;
+  /* min-height: 64px; */
   display: flex;
   justify-content: space-between;
 }
 
 .page-header-logo img {
-  margin-left: 70px;
-  margin-right: 30px;
   margin-bottom: -15px;
   padding: 0;
   border: none;
@@ -543,9 +550,6 @@ body {
 }
 
 .product-card-image-link {
-  /*grid-column: 1 / 4;*/
-  /*padding: 0;*/
-  /*margin: 0;*/
   grid-area: image;
 }
 
@@ -554,14 +558,11 @@ body {
 }
 
 .product-card-title-link {
-  /*grid-column: span 3;*/
-  /*justify-content: start;*/
   grid-area: title;
 }
 
 .product-card-title {
   margin: 0;
-  /*background-color: red;*/
 }
 
 .product-type-label {
@@ -701,15 +702,4 @@ body {
 
 .developer {
   margin: 0 70px 0 0;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
