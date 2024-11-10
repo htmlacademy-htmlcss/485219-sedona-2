@@ -188,6 +188,16 @@ body {
   padding: 20px 16px;
 }
 
+/* .navigation-link-current {
+  position: relative;
+} */
+
+.navigation-link-current .link-text {
+  padding-bottom:  18px;
+  border-bottom: 2px solid #756257;
+  width: 100%;
+}
+
 .main-menu ul li > a {
   text-decoration: none;
   display: block;
@@ -209,7 +219,7 @@ body {
   list-style: none;
 }
 
-.actions-list .actions-item:nth-child(1) .actions-link {
+.actions-link.action-search {
   background-image: url("../images/icons/search.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -217,12 +227,28 @@ body {
   height: 20px;
 }
 
-.actions-list .actions-item:nth-child(2) .actions-link {
+.actions-link.actions-favourites {
+  position: relative;
   background-image: url("../images/icons/heart.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 20px;
   height: 20px;
+}
+
+.actions-favourites::before {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  content: "12";
+  font-size: 10px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: #7DB54F;
+  border-radius: 50%;
 }
 
 .actions-list .actions-item:nth-child(3) .button {
@@ -232,6 +258,7 @@ body {
 /* ---ГЛАВНАЯ СТРАНИЦА--- */
 /* Баннер */
 .page-banner {
+  position: relative;
   background-image: url(../images/content-images/index-background.jpg);
   background-color: #c3e3f8;
   background-size: 100% auto;
@@ -246,6 +273,15 @@ body {
   margin: 0 auto;
   width: 458px;
   height: 352px;
+}
+
+.page-banner::after {
+  position: absolute;
+  content: " ";
+  background-image: url("../images/divider.svg");
+  width: 100%;
+  height: 57px;
+  bottom: 0;
 }
 
 /* Преимущества */
@@ -290,6 +326,14 @@ body {
 
 .advantages-item {
   min-height: 385px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.advantages-description {
+  margin: 10px;
 }
 
 .advantages-card {
@@ -297,7 +341,21 @@ body {
 }
 
 .advantages-card .advantages-title {
-  margin: 0;
+  position: relative;
+  margin: 20px 20px 62px 20px;
+}
+
+.advantages-title::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  border-bottom: 2px solid black;
+}
+
+.advantages-description {
+  margin: 20px;
 }
 
 .advantages-list li:nth-child(even) {
@@ -317,13 +375,6 @@ body {
 .advantages-slogan-subtitle,
 .advantages-list li:not(:first-child):not(:last-child) .advantages-description {
   color: #333333;
-}
-
-.advantages-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .advantages-list .advantages-item:last-child .advantages-img {
