@@ -162,11 +162,17 @@ body {
   margin-bottom: -15px;
   padding: 0;
   border: none;
+
+  position: relative;
+  z-index: 1;
 }
 
 .main-menu {
   display: flex;
   justify-content: space-between;
+
+  position: relative;
+  z-index: 1;
 }
 
 .navigation-list {
@@ -342,20 +348,27 @@ body {
 
 .advantages-card .advantages-title {
   position: relative;
-  margin: 20px 20px 62px 20px;
+  width: 175px;
+  margin: 20px auto 62px auto;
 }
 
 .advantages-title::after {
   position: absolute;
   content: "";
   width: 60px;
-  top: 50%;
+  top: 150%;
   left: 50%;
-  border-bottom: 2px solid black;
+  transform: translateX(-50%);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.advantages-list li:first-child .advantages-title::after,
+.advantages-list li:last-child .advantages-title::after {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-description {
-  margin: 20px;
+  margin: 20px auto;
 }
 
 .advantages-list li:nth-child(even) {
@@ -409,6 +422,33 @@ body {
   list-style: none;
 }
 
+.features-card-title {
+  position: relative;
+  margin: 100px 0 30px 0;
+}
+
+.features-list .features-item .features-card-title::before {
+  position: absolute;
+  left: 50%;
+  transform: translateY(-125%) translateX(-50%);
+  content: "";
+  width: 75px;
+  height: 75px;
+  background-repeat: no-repeat;
+}
+
+.features-list .features-item:nth-child(1) .features-card-title::before {
+  background-image: url("../images/icons/house.svg");
+}
+
+.features-list .features-item:nth-child(2) .features-card-title::before {
+  background-image: url("../images/icons/food.svg");
+}
+
+.features-list .features-item:nth-child(3) .features-card-title::before {
+  background-image: url("../images/icons/souvenir.svg");
+}
+
 .features-item {
   display: flex;
   flex-direction: column;
@@ -418,14 +458,14 @@ body {
   height: 385px;
 }
 
-.features-card-title {
-  margin: 30px 0;
-}
-
 .features-card-description {
   margin: 0;
   width: 230px;
   text-align: center;
+}
+
+.features-item:nth-child(1) .features-card-description {
+  padding: 0 15px;
 }
 
 .features-list {
@@ -574,6 +614,58 @@ body {
 .filter-catalog {
   display: flex;
   /*flex-wrap: wrap;*/
+}
+
+.filter-catalog-group {
+  border: none;
+}
+
+.filter-catalog-list {
+  list-style: none;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  background-color: #757575;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px 0 #00000040;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
 }
 
 /* Строка: Найдено Гостиниц */

@@ -20,25 +20,31 @@
 
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link" href="index.html">
+              <span class="link-text">Главная</span>
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link">О Седоне</a>
+            <a class="navigation-link">
+              <span class="link-text">О Седоне</span>
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link">Гостиницы</a>
+            <a class="navigation-link navigation-link-current">
+              <span class="link-text">Гостиницы</span>
+            </a>
           </li>
         </ul>
+
         <ul class="actions-list">
           <li class="actions-item">
-            <a class="actions-link" href="#">
+            <a class="actions-link action-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="actions-item">
-            <a class="actions-link" href="#">
+            <a class="actions-link actions-favourites" href="#">
               <span class="visually-hidden">Избранное</span>
-              <!--              <span class="actions-item-favorites-count">12</span>-->
             </a>
           </li>
           <li class="actions-item">
@@ -137,6 +143,19 @@
                 <span class="range-input-limit"> До</span>
                 <input class="range-input range-input-max" type="text" name="main-interval" value="9000">
               </label>
+            </div>
+
+            <div class="range">
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0; width: 226px;">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </fieldset>
 
