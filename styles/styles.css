@@ -217,7 +217,7 @@ body {
 .main-menu {
   display: flex;
   justify-content: space-between;
-
+  column-gap: 29px;
   position: relative;
   z-index: 1;
 }
@@ -226,10 +226,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 500px;
+  width: 670px;
   padding: 0;
   margin: 0;
   list-style: none;
+
+  /*ВРЕМЕННО*/
+  color: red;
 }
 
 .navigation-link {
@@ -274,12 +277,19 @@ body {
 .actions-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 300px;
   padding: 0;
   margin: 0;
   list-style: none;
+
+  /*ВРЕМЕННО*/
+  background-color: red;
+}
+
+.actions-item:first-child {
+  margin-left: 12px;
 }
 
 .action-search,
@@ -360,16 +370,19 @@ body {
 .advantages-slogan-subtitle {
   text-align: center;
   margin: 0;
+
+  /*ВРЕМЕННО*/
+  color: red;
 }
 
 .advantages-slogan {
-  width: 620px;
+  width: 800px;
   margin-bottom: 25px;
 }
 
 .advantages-slogan-subtitle {
   width: 651px;
-  margin-bottom: 69px;
+  margin-bottom: 91px;
 }
 
 .advantages-list {
@@ -484,7 +497,7 @@ body {
 .features-item .features-card-title::before {
   position: absolute;
   left: 50%;
-  transform: translateY(-125%) translateX(-50%);
+  transform: translateY(-136%) translateX(-50%);
   content: "";
   width: 75px;
   height: 75px;
@@ -638,7 +651,7 @@ body {
   align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0 0 34px 0;
 }
 
 .breadcrumbs-item a {
@@ -1177,6 +1190,7 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 120px;
+  padding-top: 9px;
 }
 
 .social-list {
