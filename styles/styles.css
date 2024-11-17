@@ -259,6 +259,10 @@ body {
   background-color: #f2f2f2;
 }
 
+.navigation-link:active:not(.navigation-link-current) span {
+  color: #8f8f8f;
+}
+
 .actions-item .button {
   color: #ffffff;
   padding: 8px 34px;
@@ -289,24 +293,29 @@ body {
 }
 
 .action-search,
-.actions-favourites {
+.action-favourites {
   width: 20px;
   height: 20px;
   color: black;
 }
 
 .action-search:hover,
-.actions-favourites:hover {
+.action-favourites:hover {
   color: #cccccc;
 }
 
-.actions-favourites {
+.action-search:active,
+.action-favourites:active {
+  color: #686868;
+}
+
+.action-favourites {
   position: relative;
   top: 0;
   left: -6px;
 }
 
-.actions-favourites::before {
+.action-favourites::before {
   position: absolute;
   top: -11px;
   right: -9px;
@@ -653,15 +662,11 @@ body {
   display: inline-block;
   width: 13px;
   height: 13px;
-  /* background-image: url("../images/icons/home.svg"); */
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
   position: relative;
-
 }
-
-
 
 .breadcrumbs-item {
   margin-right: 28px;
